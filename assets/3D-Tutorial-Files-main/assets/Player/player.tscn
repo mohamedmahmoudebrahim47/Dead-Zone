@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://lr6kaqylqm4q"]
+
+[ext_resource type="Script" uid="uid://5dg5n2vb3ovr" path="res://assets/3D-Tutorial-Files-main/assets/Player/player.gd" id="1_j0ww1"]
+[ext_resource type="PackedScene" uid="uid://b8afufpt17ksc" path="res://assets/3D-Tutorial-Files-main/assets/Player/weapon.tscn" id="2_us1as"]
+[ext_resource type="Texture2D" uid="uid://g5mp2lr6n0mc" path="res://assets/3D-Tutorial-Files-main/assets/Sprites/focus (1).png" id="3_4jrou"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hgb4b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d6veg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_us1as"]
+font_size = 55
+outline_size = 10
+outline_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jrou"]
+font_size = 55
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+
+[node name="player" type="CharacterBody3D" unique_id=1728602222 groups=["player"]]
+script = ExtResource("1_j0ww1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1221282843]
+mesh = SubResource("CapsuleMesh_hgb4b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1235173060]
+shape = SubResource("CapsuleShape3D_d6veg")
+
+[node name="head" type="Node3D" parent="." unique_id=1479721363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679, 0)
+
+[node name="Camera3D" type="Camera3D" parent="head" unique_id=668495330]
+current = true
+
+[node name="weapon" parent="head/Camera3D" unique_id=2133474155 instance=ExtResource("2_us1as")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.439, -0.29888532, -0.771)
+
+[node name="Label" type="Label" parent="head/Camera3D" unique_id=1504460229]
+offset_left = 9.0
+offset_top = 11.0
+offset_right = 125.0
+offset_bottom = 70.0
+text = "50/50"
+label_settings = SubResource("LabelSettings_us1as")
+
+[node name="Label2" type="Label" parent="head/Camera3D" unique_id=61936381]
+offset_left = 7.0
+offset_top = 93.0
+offset_right = 154.0
+offset_bottom = 169.0
+text = "5/5"
+label_settings = SubResource("LabelSettings_4jrou")
+
+[node name="TextureRect" type="TextureRect" parent="head/Camera3D" unique_id=254849877]
+offset_left = 128.0
+offset_top = 101.0
+offset_right = 171.0
+offset_bottom = 127.0
+
+[node name="Crosshair" type="Sprite2D" parent="head/Camera3D" unique_id=793906158]
+modulate = Color(1, 0.07999998, 0.07999998, 1)
+position = Vector2(960, 540)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("3_4jrou")

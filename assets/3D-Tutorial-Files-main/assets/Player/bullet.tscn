@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dv6gkiignldyr"]
+
+[ext_resource type="Script" uid="uid://lu5oixtj83qi" path="res://assets/3D-Tutorial-Files-main/assets/Player/bullet.gd" id="1_jb2rc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuagy"]
+albedo_color = Color(0.57916003, 0, 0.0049863937, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_jb2rc"]
+radius = 0.685
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ko2rm"]
+size = Vector3(0.001, 0.001, 0.009800672)
+
+[node name="bullet" type="Area3D" unique_id=1637753062]
+script = ExtResource("1_jb2rc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1845501028]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.2, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_nuagy")
+mesh = SubResource("TubeTrailMesh_jb2rc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1248120054]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, -0.0015065698, 0.005017534, -0.0005975412)
+shape = SubResource("BoxShape3D_ko2rm")
+
+[node name="Timer" type="Timer" parent="." unique_id=293998635]
+wait_time = 6.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
