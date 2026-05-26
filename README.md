@@ -19,3 +19,6 @@ I wanted to challenge myself to build a complete 3D game loop from scratch. more
 1. Clone or download the repository.
 2. Open the project inside the Godot 4 Engine.
 3. Move around, aim, and shoot down the attacking waves of zombies!
+4. Enjoy Now: https://mohamed-mahmoud18.itch.io/dead-zone
+   <img width="1024" height="1024" alt="cover2" src="https://github.com/user-attachments/assets/18fe2402-e787-4902-bd1f-fcaf97f3ff8d" />
+
