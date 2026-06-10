@@ -132,24 +132,6 @@ transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -9.558869, 0.05000019, 6.5
 [node name="Zombie19" parent="." unique_id=838247153 instance=ExtResource("3_1f25u")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -7.488694, 0.05000019, 17.312)
 
-[node name="Zombie20" parent="." unique_id=911286269 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -4.372285, 0.05000019, 4.5588923)
-
-[node name="Zombie21" parent="." unique_id=1992933625 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 1.7606974, 0.05000019, 12.13478)
-
-[node name="Zombie22" parent="." unique_id=1694102569 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 12.174296, 0.05000019, 7.838525)
-
-[node name="Zombie23" parent="." unique_id=1970838572 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 20.16367, 0.05000019, -6.3914366)
-
-[node name="Zombie24" parent="." unique_id=795908813 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -14.487073, 0.05000019, -19.176933)
-
-[node name="Zombie25" parent="." unique_id=2080165155 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -2.6922994, 0.05000019, -3.663867)
-
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1734225767]
 navigation_mesh = SubResource("NavigationMesh_1f25u")
 
