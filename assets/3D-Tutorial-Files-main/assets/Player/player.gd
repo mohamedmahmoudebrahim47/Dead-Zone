@@ -76,10 +76,10 @@ func _physics_process(delta: float) -> void:
 
 
 func damage():
-	health -=1
+	health = max(0, health - 1)
+	if health == 0:
 	
-	
-	pass
+		pass
 
 
 

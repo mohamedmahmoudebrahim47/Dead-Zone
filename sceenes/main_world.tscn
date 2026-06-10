@@ -150,36 +150,6 @@ transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -14.487073, 0.05000019, -1
 [node name="Zombie25" parent="." unique_id=2080165155 instance=ExtResource("3_1f25u")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -2.6922994, 0.05000019, -3.663867)
 
-[node name="Zombie26" parent="." unique_id=1877160793 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -5.2187853, 0.05000019, -9.243193)
-
-[node name="Zombie27" parent="." unique_id=245330108 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 19.872833, 3.2743206, -19.90063)
-
-[node name="Zombie28" parent="." unique_id=1175073960 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 1.4418898, 0.05000019, -22.719044)
-
-[node name="Zombie29" parent="." unique_id=855748509 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -1.7613869, 0.05000019, 18.999317)
-
-[node name="Zombie30" parent="." unique_id=626756937 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -4.5083103, 0.05000019, -20.000713)
-
-[node name="Zombie31" parent="." unique_id=1382606816 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -9.713816, 0.05000019, -20.000713)
-
-[node name="Zombie32" parent="." unique_id=209488962 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 7.280504, 0.05000019, -20.000713)
-
-[node name="Zombie33" parent="." unique_id=11409791 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -20.823217, 0.05000019, -20.000713)
-
-[node name="Zombie34" parent="." unique_id=1485309495 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -22.689835, 0.05000019, -6.5105667)
-
-[node name="Zombie35" parent="." unique_id=1410466467 instance=ExtResource("3_1f25u")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -20.823217, 0.05000019, 14.225861)
-
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1734225767]
 navigation_mesh = SubResource("NavigationMesh_1f25u")
 
