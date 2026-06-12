@@ -3,7 +3,7 @@ extends CharacterBody3D
 var SPEED = 8.0
 var JUMP_VELOCITY = 4.5
 var gravity = -9.8
-var sensitivity = 0.004
+var sensitivity = 0.001
 var health = 5
 @onready var head: Node3D = $head
 @onready var camera_3d: Camera3D = $head/Camera3D
@@ -32,9 +32,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		head.rotate_y(-event.relative.x * sensitivity)
 		camera_3d.rotate_x(-event.relative.y * sensitivity)
 		camera_3d.rotation.x = clamp(camera_3d.rotation.x, deg_to_rad(-40), deg_to_rad(60))
-	 
-	pass 
-  
+	pass
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -50,7 +48,7 @@ func _physics_process(delta: float) -> void:
 		weapon_animation.play("shoot")
 		shoot()
 
-	if Input.is_action_just_pressed("reload"): 
+	if Input.is_action_just_pressed("reload"):
 		weapon_animation.play("reload")
 		bullets_left = 50
 	
