@@ -55,8 +55,19 @@ func _physics_process(delta: float) -> void:
 	if health == 0:
 		get_tree().reload_current_scene()
 		
+ 	# Count active zombies in the scene
+	var zombie_count = 0
+	for child in get_parent().get_children():
+		if "Zombie" in child.name:
+			zombie_count += 1
+			
 	
-	
+	# Win condition
+	if zombie_count == 0:
+		$head/Camera3D/Label.text = "WINNER WINNER ZOMBIES KILLER! Press Enter to Restart"
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		if Input.is_key_pressed(KEY_ENTER) or Input.is_key_pressed(KEY_KP_ENTER):
+			get_tree().reload_current_scene()
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
